@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
@@ -9,7 +10,7 @@ namespace Demo.Extensions
 {
     public static class OpenApiExtensions
     {
-        public static IServiceCollection AddOpenApi(this IServiceCollection services)
+        public static IServiceCollection ConfigureOpenApi(this IServiceCollection services)
         {
             services.AddSwaggerGen();
             services.AddSwaggerGenNewtonsoftSupport();
@@ -49,6 +50,7 @@ namespace Demo.Extensions
     {
         public void Configure(SwaggerUIOptions options)
         {
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Demo v1");
         }
     }
 
