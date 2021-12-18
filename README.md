@@ -1,2 +1,2 @@
-# demo-unclogging-startup
-Uncloggin Startup.cs post companion repository
+# demo-unclutter-startup
+Unclutter Startup.cs article companion repository
